@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="223" />
+   <irq preferredWidth="63" />
+   <inputclock preferredWidth="156" />
+   <name preferredWidth="172" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Basic Functions/DMA/mSGDMA Sub-core,Library/Basic Functions,Project,Library/Basic Functions/DMA,Library" />
+ <window width="1920" height="1054" x="0" y="26" />
+</preferences>

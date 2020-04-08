@@ -1,0 +1,46 @@
+# ignore ModelSim generated files and directories (temp files and so on)
+[_@]*
+
+# ignore compilation output of ModelSim
+*.mti
+*.dat
+*.dbs
+*.psm
+*.bak
+*.cmp
+*.jpg
+*.html
+*.bsf
+
+# ignore simulation output of ModelSim
+wlf*
+*.wlf
+*.vstf
+*.ucdb
+cov*/
+transcript*
+sc_dpiheader.h
+vsim.dbg
+*.vcd
+.library_mapping.xml
+.project
+.metals/metals.h2.db
+.metals/metals.log
+
+# ignore quartus compilation files
+**/db/*
+**/incremental_db/*
+**/output_files/*
+*_pin_model_dump*
+*.qws
+*.qdf
+**/greybox_tmp/*
+# software compilation files
+*.elf 
+*.o
+program.vh
+program.bin
+program.mem 
+.settings/com.sigasi.hdt.verilog.version.prefs
+*.s
+verbose.log
