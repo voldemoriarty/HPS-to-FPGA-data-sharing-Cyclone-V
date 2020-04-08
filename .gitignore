@@ -46,3 +46,4 @@ program.mem
 verbose.log
 hps_isw_handoff
 hps_sdram_p0_all_pins.txt
+simulation
