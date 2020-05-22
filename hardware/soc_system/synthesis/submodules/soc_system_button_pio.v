@@ -44,18 +44,17 @@ module soc_system_button_pio (
   input            write_n;
   input   [ 31: 0] writedata;
 
-
-wire             clk_en;
-reg     [  1: 0] d1_data_in;
-reg     [  1: 0] d2_data_in;
-wire    [  1: 0] data_in;
-reg     [  1: 0] edge_capture;
-wire             edge_capture_wr_strobe;
-wire    [  1: 0] edge_detect;
-wire             irq;
-reg     [  1: 0] irq_mask;
-wire    [  1: 0] read_mux_out;
-reg     [ 31: 0] readdata;
+  wire             clk_en;
+  reg     [  1: 0] d1_data_in;
+  reg     [  1: 0] d2_data_in;
+  wire    [  1: 0] data_in;
+  reg     [  1: 0] edge_capture;
+  wire             edge_capture_wr_strobe;
+  wire    [  1: 0] edge_detect;
+  wire             irq;
+  reg     [  1: 0] irq_mask;
+  wire    [  1: 0] read_mux_out;
+  reg     [ 31: 0] readdata;
   assign clk_en = 1;
   //s1, which is an e_avalon_slave
   assign read_mux_out = ({2 {(address == 0)}} & data_in) |
@@ -110,18 +109,15 @@ reg     [ 31: 0] readdata;
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
+        begin
           d1_data_in <= 0;
-      else if (clk_en)
-          d1_data_in <= data_in;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
           d2_data_in <= 0;
+        end
       else if (clk_en)
+        begin
+          d1_data_in <= data_in;
           d2_data_in <= d1_data_in;
+        end
     end
 
 

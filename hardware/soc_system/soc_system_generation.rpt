@@ -2,31 +2,31 @@ Info: Starting: Create HDL design files for synthesis
 Info: qsys-generate /home/saad/trashcan/docAgain/hardware/soc_system.qsys --synthesis=VERILOG --output-directory=/home/saad/trashcan/docAgain/hardware/soc_system/synthesis --family="Cyclone V" --part=5CSEBA6U23I7
 Progress: Loading hardware/soc_system.qsys
 Progress: Reading input file
-Progress: Adding ILC [interrupt_latency_counter 19.1]
+Progress: Adding ILC [interrupt_latency_counter 16.0]
 Progress: Parameterizing module ILC
 Progress: Adding PeStream_0 [PeStream 1.0]
 Progress: Parameterizing module PeStream_0
-Progress: Adding button_pio [altera_avalon_pio 19.1]
+Progress: Adding button_pio [altera_avalon_pio 16.0]
 Progress: Parameterizing module button_pio
-Progress: Adding clk_0 [clock_source 19.1]
+Progress: Adding clk_0 [clock_source 16.0]
 Progress: Parameterizing module clk_0
-Progress: Adding dipsw_pio [altera_avalon_pio 19.1]
+Progress: Adding dipsw_pio [altera_avalon_pio 16.0]
 Progress: Parameterizing module dipsw_pio
-Progress: Adding hps_0 [altera_hps 19.1]
+Progress: Adding hps_0 [altera_hps 16.0]
 Progress: Parameterizing module hps_0
-Progress: Adding jtag_uart [altera_avalon_jtag_uart 19.1]
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 16.0]
 Progress: Parameterizing module jtag_uart
-Progress: Adding led_pio [altera_avalon_pio 19.1]
+Progress: Adding led_pio [altera_avalon_pio 16.0]
 Progress: Parameterizing module led_pio
-Progress: Adding mm_bridge_0 [altera_avalon_mm_bridge 19.1]
+Progress: Adding mm_bridge_0 [altera_avalon_mm_bridge 16.0]
 Progress: Parameterizing module mm_bridge_0
-Progress: Adding streamA_DMA [altera_msgdma 19.1]
+Progress: Adding streamA_DMA [altera_msgdma 16.0]
 Progress: Parameterizing module streamA_DMA
-Progress: Adding streamB_DMA [altera_msgdma 19.1]
+Progress: Adding streamB_DMA [altera_msgdma 16.0]
 Progress: Parameterizing module streamB_DMA
-Progress: Adding streamR_DMA [altera_msgdma 19.1]
+Progress: Adding streamR_DMA [altera_msgdma 16.0]
 Progress: Parameterizing module streamR_DMA
-Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 19.1]
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 16.0]
 Progress: Parameterizing module sysid_qsys
 Progress: Building connections
 Progress: Parameterizing connections
@@ -63,11 +63,11 @@ Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_002.sender
 Info: ILC: "soc_system" instantiated interrupt_latency_counter "ILC"
 Info: PeStream_0: "soc_system" instantiated PeStream "PeStream_0"
 Info: button_pio: Starting RTL generation for module 'soc_system_button_pio'
-Info: button_pio:   Generation command is [exec /home/saad/intelFPGA/19.1/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=/tmp/alt8360_7060454479561494738.dir/0005_button_pio_gen/ --quartus_dir=/home/saad/intelFPGA/19.1/quartus --verilog --config=/tmp/alt8360_7060454479561494738.dir/0005_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: button_pio:   Generation command is [exec /home/saad/intelFPGA/16.0/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/16.0/quartus/linux64/perl/lib -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin/perl_lib -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin -I /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=/tmp/alt8404_862058837363051170.dir/0003_button_pio_gen/ --quartus_dir=/home/saad/intelFPGA/16.0/quartus --verilog --config=/tmp/alt8404_862058837363051170.dir/0003_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: button_pio: Done RTL generation for module 'soc_system_button_pio'
 Info: button_pio: "soc_system" instantiated altera_avalon_pio "button_pio"
 Info: dipsw_pio: Starting RTL generation for module 'soc_system_dipsw_pio'
-Info: dipsw_pio:   Generation command is [exec /home/saad/intelFPGA/19.1/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_dipsw_pio --dir=/tmp/alt8360_7060454479561494738.dir/0006_dipsw_pio_gen/ --quartus_dir=/home/saad/intelFPGA/19.1/quartus --verilog --config=/tmp/alt8360_7060454479561494738.dir/0006_dipsw_pio_gen//soc_system_dipsw_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: dipsw_pio:   Generation command is [exec /home/saad/intelFPGA/16.0/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/16.0/quartus/linux64/perl/lib -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin/perl_lib -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin -I /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_dipsw_pio --dir=/tmp/alt8404_862058837363051170.dir/0004_dipsw_pio_gen/ --quartus_dir=/home/saad/intelFPGA/16.0/quartus --verilog --config=/tmp/alt8404_862058837363051170.dir/0004_dipsw_pio_gen//soc_system_dipsw_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: dipsw_pio: Done RTL generation for module 'soc_system_dipsw_pio'
 Info: dipsw_pio: "soc_system" instantiated altera_avalon_pio "dipsw_pio"
 Info: hps_0: "Running  for module: hps_0"
@@ -75,11 +75,11 @@ Info: hps_0: HPS Main PLL counter settings: n = 0  m = 63
 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
 Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
-Info: jtag_uart:   Generation command is [exec /home/saad/intelFPGA/19.1/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=/tmp/alt8360_7060454479561494738.dir/0007_jtag_uart_gen/ --quartus_dir=/home/saad/intelFPGA/19.1/quartus --verilog --config=/tmp/alt8360_7060454479561494738.dir/0007_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec /home/saad/intelFPGA/16.0/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/16.0/quartus/linux64/perl/lib -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin/perl_lib -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin -I /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=/tmp/alt8404_862058837363051170.dir/0005_jtag_uart_gen/ --quartus_dir=/home/saad/intelFPGA/16.0/quartus --verilog --config=/tmp/alt8404_862058837363051170.dir/0005_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
 Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: led_pio: Starting RTL generation for module 'soc_system_led_pio'
-Info: led_pio:   Generation command is [exec /home/saad/intelFPGA/19.1/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/19.1/quartus/sopc_builder/bin -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/saad/intelFPGA/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=/tmp/alt8360_7060454479561494738.dir/0008_led_pio_gen/ --quartus_dir=/home/saad/intelFPGA/19.1/quartus --verilog --config=/tmp/alt8360_7060454479561494738.dir/0008_led_pio_gen//soc_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio:   Generation command is [exec /home/saad/intelFPGA/16.0/quartus/linux64/perl/bin/perl -I /home/saad/intelFPGA/16.0/quartus/linux64/perl/lib -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin/europa -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin/perl_lib -I /home/saad/intelFPGA/16.0/quartus/sopc_builder/bin -I /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/saad/intelFPGA/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=/tmp/alt8404_862058837363051170.dir/0006_led_pio_gen/ --quartus_dir=/home/saad/intelFPGA/16.0/quartus --verilog --config=/tmp/alt8404_862058837363051170.dir/0006_led_pio_gen//soc_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: led_pio: Done RTL generation for module 'soc_system_led_pio'
 Info: led_pio: "soc_system" instantiated altera_avalon_pio "led_pio"
 Info: mm_bridge_0: "soc_system" instantiated altera_avalon_mm_bridge "mm_bridge_0"
