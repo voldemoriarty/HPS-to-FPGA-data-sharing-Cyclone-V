@@ -769,4 +769,11 @@ The boot flow of ARM is like this:
     ![fat](pics/spl-fat.png)
 
   - Click Generate to generate the preloader files and then exit.
+  - Now go to the `software/spl_bsp` directory in the quartus project folder and run 
 
+    ```bash
+    make -j$(nproc)
+    ```
+
+    This will start compilation and fill the screen with lots of messages. In the end there should be no errors and the compilation will be successfull.
+    
