@@ -776,4 +776,7 @@ The boot flow of ARM is like this:
     ```
 
     This will start compilation and fill the screen with lots of messages. In the end there should be no errors and the compilation will be successfull.
-    
+  
+  ## Step 16: Modifying the Linux SDCard Image
+  
+  The default image that comes with the DE10 Nano board contains 
