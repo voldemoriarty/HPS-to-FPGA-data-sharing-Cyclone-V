@@ -726,6 +726,9 @@ For the first time only, projects using HPS with DDR have a slightly different s
 The ARM core has the ability to program the FPGA on boot. For this purpose, we need to convert our `sof` file to and `rbf` file. Which is just another format. Running `make rbf` will convert the `sof` to `rbf`.
 
 ## Step 15: Generating the PreLoader
+
+### Boot Info
+
 The boot flow of ARM is like this:
 
 ![boot](pics/boot_process.png)
@@ -742,6 +745,28 @@ The boot flow of ARM is like this:
   
   - UBoot is an open source bootloader that is used to load Linux. This step is optional since uBoot is not necessary for a baremetal application
 
-  For complete technical details about the boot process, please refer to the Cyclone V HPS Technical Reference Manual
+  For complete technical details about the boot process, please refer to the Cyclone V HPS Technical Reference Manual.
 
-  
+### Preloader Generation
+
+  - Altera provides a utility called `bsp-editor` which reads the HPS configuration from the Qsys design files and generates appropriate code in the preloader. This allows the preloader to configure the HPS as stated in the Qsys HPS component settings. To launch the `bsp-editor`, run the following in the embedded shell
+
+    ```bash
+    bsp-editor
+    ```
+    This will open the window
+
+    ![bsp-editor](pics/bsp-editor.png)
+
+  - Go to `File > New HPS BSP` and set the settings according to the picture
+    
+    ![new-bsp](pics/new-bsp.png)
+
+    In the `Preloader Settings Directory`, provide the path to `hps_isw_handoff/soc_system_hps_0` directory inside the quartus project folder. Click Ok
+
+  - In the window that opens, there will be many settings. We need to modify only 1 of these: `spl.boot.fat_support`. This enables the FAT filesystem support. This is needed because the SDCARD containing the uboot image will be FAT formatted.
+
+    ![fat](pics/spl-fat.png)
+
+  - Click Generate to generate the preloader files and then exit.
+
