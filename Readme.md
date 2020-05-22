@@ -720,3 +720,28 @@ For the first time only, projects using HPS with DDR have a slightly different s
   ![pins](pics/tclpins.png)
 
 - Now you can compile the project like normal FPGA project
+- Note that this step is automated in the Makefile. So you just need to run `make sof` to generate an sof file. The Makefile will run the TCL script automatically
+
+## Step 14: Generating RBF
+The ARM core has the ability to program the FPGA on boot. For this purpose, we need to convert our `sof` file to and `rbf` file. Which is just another format. Running `make rbf` will convert the `sof` to `rbf`.
+
+## Step 15: Generating the PreLoader
+The boot flow of ARM is like this:
+
+![boot](pics/boot_process.png)
+
+  - Reset precedes the boot stages and is an important part of device initialization. There are two different
+  reset types: **cold reset** and **warm reset**. The boot process begins when the CPU in the MPU exits from the reset state. When the CPU exits from reset, it starts executing code at the reset exception address where the boot ROM code is located. With warm reset, some software registers are preserved and the boot process may skip some steps depending on software settings. In addition, on a warm reset, the preloader has the ability to be executed from on-chip RAM.
+
+  - The boot ROM code is 64 KB in size and located in on-chip ROM at address range 0xFFFD0000 to 0xFFFDFFFF. The function of the boot ROM code is to determine the boot source, initialize the HPS after a reset, and jump to the preloader. 
+
+  - The function of the preloader is user-defined. However, typical functions include:
+    - Initializing SDRAM interface
+    - Configuring HPS IO pins
+    - Load the bootloader
+  
+  - UBoot is an open source bootloader that is used to load Linux. This step is optional since uBoot is not necessary for a baremetal application
+
+  For complete technical details about the boot process, please refer to the Cyclone V HPS Technical Reference Manual
+
+  
